@@ -39,7 +39,19 @@ typedef NS_ENUM(NSUInteger, AppMessageKey) {
     
     // Keep a weak reference to self to prevent it staying around forever
     __weak typeof(self) welf = self;
-    
+
+    // need to send arbitrary data to watch before it can send to us
+    NSNumber *arbitraryNumber = [NSNumber numberWithUint8:42];
+    NSDictionary *update = @{ @(0):arbitraryNumber };
+    [self.watch appMessagesPushUpdate:update onSent:^(PBWatch *watch,
+                                                      NSDictionary *update, NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully sent message.");
+        } else {
+            NSLog(@"Error sending message: %@", error);
+        }
+    }];
+
     // Sign up for AppMessage
     [self.watch appMessagesAddReceiveUpdateHandler:^BOOL(PBWatch *watch, NSDictionary *update) {
         __strong typeof(welf) sself = welf;
