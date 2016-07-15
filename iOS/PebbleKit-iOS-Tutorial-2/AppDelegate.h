@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PebbleKit/PebbleKit.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (weak, nonatomic) PBPebbleCentral *central;
+@property (weak, nonatomic) PBWatch *watch;
+
 @property (strong, nonatomic) UIWindow *window;
 
+- (void) connectPebble;
 
 @end
 
