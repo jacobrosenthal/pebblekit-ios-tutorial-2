@@ -150,12 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E1D9F9E1A6559FD008F6B0B /* Build configuration list for PBXNativeTarget "PebbleKit-iOS-Tutorial-2" */;
 			buildPhases = (
-				143815640B4F0F45495D28C3 /* Check Pods Manifest.lock */,
+				143815640B4F0F45495D28C3 /* [CP] Check Pods Manifest.lock */,
 				6E1D9F771A6559FD008F6B0B /* Sources */,
 				6E1D9F781A6559FD008F6B0B /* Frameworks */,
 				6E1D9F791A6559FD008F6B0B /* Resources */,
-				B75EBBE9D86E275499650C7D /* Embed Pods Frameworks */,
-				4180FE10D35E64E95B0ECDD5 /* Copy Pods Resources */,
+				B75EBBE9D86E275499650C7D /* [CP] Embed Pods Frameworks */,
+				4180FE10D35E64E95B0ECDD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,14 +242,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		143815640B4F0F45495D28C3 /* Check Pods Manifest.lock */ = {
+		143815640B4F0F45495D28C3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,14 +257,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4180FE10D35E64E95B0ECDD5 /* Copy Pods Resources */ = {
+		4180FE10D35E64E95B0ECDD5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,14 +272,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PebbleKit-iOS-Tutorial-2/Pods-PebbleKit-iOS-Tutorial-2-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B75EBBE9D86E275499650C7D /* Embed Pods Frameworks */ = {
+		B75EBBE9D86E275499650C7D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
