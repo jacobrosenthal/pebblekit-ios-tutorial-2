@@ -2,6 +2,7 @@
 
 #define KEY_BUTTON_UP   0
 #define KEY_BUTTON_DOWN 1
+#define BUTTON 0
 
 static Window *s_main_window;
 static TextLayer *s_output_layer;
@@ -28,13 +29,13 @@ static void outbox_failed_handler(DictionaryIterator *iter, AppMessageResult rea
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
   text_layer_set_text(s_output_layer, "Up");
 
-  send(KEY_BUTTON_UP, 0);
+  send(BUTTON, KEY_BUTTON_UP);
 }
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
   text_layer_set_text(s_output_layer, "Down");
 
-  send(KEY_BUTTON_DOWN, 0);
+  send(BUTTON, KEY_BUTTON_DOWN);
 }
 
 static void click_config_provider(void *context) {
